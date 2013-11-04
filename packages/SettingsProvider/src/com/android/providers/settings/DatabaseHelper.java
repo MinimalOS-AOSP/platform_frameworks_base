@@ -2709,6 +2709,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                     R.bool.def_guest_user_enabled);
             loadSetting(stmt, Settings.Global.ENHANCED_4G_MODE_ENABLED,
                     ImsConfig.FeatureValueConstants.ON);
+            loadIntegerSetting(stmt, Settings.System.STATUS_BAR_BATTERY_STYLE,
+                    R.integer.def_battery_style);
 
             /*
              * IMPORTANT: Do not add any more upgrade steps here as the global,
