@@ -313,7 +313,7 @@ public class UsbDeviceManager {
             try {
                 // Restore default functions.
                 mCurrentFunctions = SystemProperties.get(USB_CONFIG_PROPERTY,
-                        UsbManager.USB_FUNCTION_NONE);
+                        UsbManager.USB_FUNCTION_MTP);
                 if (UsbManager.USB_FUNCTION_NONE.equals(mCurrentFunctions)) {
                     mCurrentFunctions = UsbManager.USB_FUNCTION_MTP;
                 }
@@ -809,7 +809,7 @@ public class UsbDeviceManager {
 
         private String getDefaultFunctions() {
             String func = SystemProperties.get(USB_PERSISTENT_CONFIG_PROPERTY,
-                    UsbManager.USB_FUNCTION_NONE);
+                    UsbManager.USB_FUNCTION_MTP);
             if (UsbManager.USB_FUNCTION_NONE.equals(func)) {
                 func = UsbManager.USB_FUNCTION_MTP;
             }
