@@ -4076,6 +4076,12 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
                     if (mTouchMode == TOUCH_MODE_REST) {
                         final float vscroll = event.getAxisValue(MotionEvent.AXIS_VSCROLL);
                         if (vscroll != 0) {
+                            // Re-sync everything if data has been changed
+                            // since the scroll operation (trackMotionScroll) can query the adapter.
+                            if (mDataChanged) {
+                                layoutChildren();
+                            }
+
                             final int delta = (int) (vscroll * getVerticalScrollFactor());
                             if (!trackMotionScroll(delta, delta)) {
                                 return true;
