@@ -1288,7 +1288,7 @@ public class GridView extends AbsListView {
                 adjustViewsUpOrDown();
                 break;
             case LAYOUT_SPECIFIC:
-                sel = fillSpecific(mSelectedPosition, mSpecificTop);
+                sel = fillSpecific(reconcileSelectedPosition(), mSpecificTop);
                 break;
             case LAYOUT_SYNC:
                 sel = fillSpecific(mSyncPosition, mSpecificTop);
