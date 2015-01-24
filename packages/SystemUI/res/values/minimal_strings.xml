@@ -49,4 +49,8 @@
 
     <!-- Battery level for expanded quick settings [CHAR LIMIT=2] -->
     <string name="battery_level_template"><xliff:g id="level" example="45">%d</xliff:g>%%</string>
+
+    <!-- Screen timeout tile -->
+    <string name="quick_settings_timeout_label">Timeout</string>
+    <string name="quick_settings_screen_timeout_detail_title">Screen timeout</string>
 </resources>
