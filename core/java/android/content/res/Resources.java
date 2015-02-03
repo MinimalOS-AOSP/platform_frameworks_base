@@ -2310,7 +2310,8 @@ public class Resources {
         int type;
         while ((type=parser.next()) != XmlPullParser.END_DOCUMENT
                && (type != XmlPullParser.END_TAG || parser.getDepth() > outerDepth)) {
-            if (type == XmlPullParser.END_TAG || type == XmlPullParser.TEXT) {
+            if (type == XmlPullParser.END_TAG || type == XmlPullParser.TEXT
+                   || type == XmlPullParser.START_DOCUMENT) {
                 continue;
             }
             
