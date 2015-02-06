@@ -96,10 +96,11 @@ public abstract class InputEventReceiver {
             }
             mCloseGuard.close();
         }
-
-        if (mReceiverPtr != 0) {
-            nativeDispose(mReceiverPtr);
-            mReceiverPtr = 0;
+        synchronized(this) {
+            if (mReceiverPtr != 0) {
+                nativeDispose(mReceiverPtr);
+                mReceiverPtr = 0;
+            }
         }
         mInputChannel = null;
         mMessageQueue = null;
@@ -140,17 +141,19 @@ public abstract class InputEventReceiver {
         if (event == null) {
             throw new IllegalArgumentException("event must not be null");
         }
-        if (mReceiverPtr == 0) {
-            Log.w(TAG, "Attempted to finish an input event but the input event "
-                    + "receiver has already been disposed.");
-        } else {
-            int index = mSeqMap.indexOfKey(event.getSequenceNumber());
-            if (index < 0) {
-                Log.w(TAG, "Attempted to finish an input event that is not in progress.");
+        synchronized(this) {
+            if (mReceiverPtr == 0) {
+                Log.w(TAG, "Attempted to finish an input event but the input event "
+                        + "receiver has already been disposed.");
             } else {
-                int seq = mSeqMap.valueAt(index);
-                mSeqMap.removeAt(index);
-                nativeFinishInputEvent(mReceiverPtr, seq, handled);
+                int index = mSeqMap.indexOfKey(event.getSequenceNumber());
+                if (index < 0) {
+                    Log.w(TAG, "Attempted to finish an input event that is not in progress.");
+                } else {
+                    int seq = mSeqMap.valueAt(index);
+                    mSeqMap.removeAt(index);
+                    nativeFinishInputEvent(mReceiverPtr, seq, handled);
+                }
             }
         }
         event.recycleIfNeededAfterDispatch();
