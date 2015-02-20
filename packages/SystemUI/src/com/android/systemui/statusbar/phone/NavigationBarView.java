@@ -31,6 +31,8 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.os.RemoteException;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -42,6 +44,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewRootImpl;
 import android.view.WindowManager;
+import android.view.GestureDetector;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -93,6 +96,8 @@ public class NavigationBarView extends LinearLayout {
     private boolean mIsLayoutRtl;
     private boolean mLayoutTransitionsEnabled = true;
     private boolean mWakeAndUnlocking;
+
+    private GestureDetector mDoubleTapGesture;
 
     private class NavTransitionListener implements TransitionListener {
         private boolean mBackTransitioning;
@@ -185,6 +190,17 @@ public class NavigationBarView extends LinearLayout {
         getIcons(res);
 
         mBarTransitions = new NavigationBarTransitions(this);
+
+        mDoubleTapGesture = new GestureDetector(mContext,
+                new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+                if (pm != null) pm.goToSleep(e.getEventTime());
+                return true;
+            }
+        });
+
     }
 
     @Override
@@ -217,6 +233,10 @@ public class NavigationBarView extends LinearLayout {
         if (mDeadZone != null && event.getAction() == MotionEvent.ACTION_OUTSIDE) {
             mDeadZone.poke(event);
         }
+        if (Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.DOUBLE_TAP_SLEEP_NAVBAR, 1) == 1)
+            mDoubleTapGesture.onTouchEvent(event);
+
         return super.onTouchEvent(event);
     }
 
