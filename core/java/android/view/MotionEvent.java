@@ -403,7 +403,16 @@ public final class MotionEvent extends InputEvent implements Parcelable {
      */
     @Deprecated
     public static final int ACTION_POINTER_ID_SHIFT = 8;
-    
+
+    /**
+     * This flag indicates that the event passed through another visible window above it.
+     * A security sensitive application can check this flag to identify situations in which
+     * a malicious application may have covered up its content for the purpose of hijacking touches.
+     * Note that this flag is set only if the touched point is obscured. It is not set if
+     * some other part of the window is obscured.
+     */
+    public static final int FLAG_WINDOW_IS_OBSCURED = 0x1;
+
     /**
      * This flag indicates that the window that received this motion event is partly
      * or wholly obscured by another visible window above it.  This flag is set to true
@@ -413,8 +422,10 @@ public final class MotionEvent extends InputEvent implements Parcelable {
      * of misleading the user or hijacking touches.  An appropriate response might be
      * to drop the suspect touches or to take additional precautions to confirm the user's
      * actual intent.
+     *
+     * @hide till next major release
      */
-    public static final int FLAG_WINDOW_IS_OBSCURED = 0x1;
+    public static final int FLAG_WINDOW_IS_PARTIALLY_OBSCURED = 0x2;
 
     /**
      * Private flag that indicates when the system has detected that this motion event
