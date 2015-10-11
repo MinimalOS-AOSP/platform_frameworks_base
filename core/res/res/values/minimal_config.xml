@@ -23,5 +23,8 @@
     <!-- The list of components which should be forced to be enabled. -->
     <string-array name="config_forceEnabledComponents" translatable="false">
     </string-array>
+	
+    <!-- Kill app long press back -->
+    <integer name="config_backKillTimeout">1000</integer>	
 
 </resources>
