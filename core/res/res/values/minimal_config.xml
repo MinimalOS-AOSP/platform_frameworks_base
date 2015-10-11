@@ -25,5 +25,8 @@
     </string-array>
 
     <!-- Enable power button on a secured lockscreen -->
-    <bool name="config_powerButtonLockscreenEnabled">false</bool>
+    <bool name="config_powerButtonLockscreenEnabled">false</bool>        
+
+    <!-- kill app long press back -->
+    <integer name="config_backKillTimeout">1000</integer>
 </resources>
