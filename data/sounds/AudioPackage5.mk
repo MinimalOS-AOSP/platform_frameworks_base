@@ -8,11 +8,11 @@
 LOCAL_PATH:= frameworks/base/data/sounds
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/Alarm_Beep_01.ogg:system/media/audio/alarms/Alarm_Beep_01.ogg \
-    $(LOCAL_PATH)/Alarm_Beep_02.ogg:system/media/audio/alarms/Alarm_Beep_02.ogg \
-    $(LOCAL_PATH)/Alarm_Beep_03.ogg:system/media/audio/alarms/Alarm_Beep_03.ogg \
-    $(LOCAL_PATH)/Alarm_Buzzer.ogg:system/media/audio/alarms/Alarm_Buzzer.ogg \
-    $(LOCAL_PATH)/Alarm_Classic.ogg:system/media/audio/alarms/Alarm_Classic.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Beep_01.ogg:system/media/audio/alarms/Alarm_Beep_01.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Beep_02.ogg:system/media/audio/alarms/Alarm_Beep_02.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Beep_03.ogg:system/media/audio/alarms/Alarm_Beep_03.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Buzzer.ogg:system/media/audio/alarms/Alarm_Buzzer.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Classic.ogg:system/media/audio/alarms/Alarm_Classic.ogg \
     $(LOCAL_PATH)/effects/Dock.ogg:system/media/audio/ui/Dock.ogg \
     $(LOCAL_PATH)/effects/Effect_Tick.ogg:system/media/audio/ui/Effect_Tick.ogg \
     $(LOCAL_PATH)/effects/KeypressDelete.ogg:system/media/audio/ui/KeypressDelete.ogg \

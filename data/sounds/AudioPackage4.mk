@@ -10,19 +10,19 @@
 LOCAL_PATH:= frameworks/base/data/sounds
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/Alarm_Beep_01.ogg:system/media/audio/alarms/Alarm_Beep_01.ogg \
-    $(LOCAL_PATH)/Alarm_Beep_02.ogg:system/media/audio/alarms/Alarm_Beep_02.ogg \
-    $(LOCAL_PATH)/Alarm_Beep_03.ogg:system/media/audio/alarms/Alarm_Beep_03.ogg \
-    $(LOCAL_PATH)/Alarm_Buzzer.ogg:system/media/audio/alarms/Alarm_Buzzer.ogg \
-    $(LOCAL_PATH)/Alarm_Classic.ogg:system/media/audio/alarms/Alarm_Classic.ogg \
-    $(LOCAL_PATH)/Alarm_Rooster_02.ogg:system/media/audio/alarms/Alarm_Rooster_02.ogg \
-    $(LOCAL_PATH)/F1_MissedCall.ogg:system/media/audio/notifications/F1_MissedCall.ogg \
-    $(LOCAL_PATH)/F1_New_MMS.ogg:system/media/audio/notifications/F1_New_MMS.ogg \
-    $(LOCAL_PATH)/F1_New_SMS.ogg:system/media/audio/notifications/F1_New_SMS.ogg \
-    $(LOCAL_PATH)/Ring_Classic_02.ogg:system/media/audio/ringtones/Ring_Classic_02.ogg \
-    $(LOCAL_PATH)/Ring_Digital_02.ogg:system/media/audio/ringtones/Ring_Digital_02.ogg \
-    $(LOCAL_PATH)/Ring_Synth_02.ogg:system/media/audio/ringtones/Ring_Synth_02.ogg \
-    $(LOCAL_PATH)/Ring_Synth_04.ogg:system/media/audio/ringtones/Ring_Synth_04.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Beep_01.ogg:system/media/audio/alarms/Alarm_Beep_01.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Beep_02.ogg:system/media/audio/alarms/Alarm_Beep_02.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Beep_03.ogg:system/media/audio/alarms/Alarm_Beep_03.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Buzzer.ogg:system/media/audio/alarms/Alarm_Buzzer.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Classic.ogg:system/media/audio/alarms/Alarm_Classic.ogg \
+    $(LOCAL_PATH)/classic/Alarm_Rooster_02.ogg:system/media/audio/alarms/Alarm_Rooster_02.ogg \
+    $(LOCAL_PATH)/classic/F1_MissedCall.ogg:system/media/audio/notifications/F1_MissedCall.ogg \
+    $(LOCAL_PATH)/classic/F1_New_MMS.ogg:system/media/audio/notifications/F1_New_MMS.ogg \
+    $(LOCAL_PATH)/classic/F1_New_SMS.ogg:system/media/audio/notifications/F1_New_SMS.ogg \
+    $(LOCAL_PATH)/classic/Ring_Classic_02.ogg:system/media/audio/ringtones/Ring_Classic_02.ogg \
+    $(LOCAL_PATH)/classic/Ring_Digital_02.ogg:system/media/audio/ringtones/Ring_Digital_02.ogg \
+    $(LOCAL_PATH)/classic/Ring_Synth_02.ogg:system/media/audio/ringtones/Ring_Synth_02.ogg \
+    $(LOCAL_PATH)/classic/Ring_Synth_04.ogg:system/media/audio/ringtones/Ring_Synth_04.ogg \
     $(LOCAL_PATH)/effects/Dock.ogg:system/media/audio/ui/Dock.ogg \
     $(LOCAL_PATH)/effects/Effect_Tick.ogg:system/media/audio/ui/Effect_Tick.ogg \
     $(LOCAL_PATH)/effects/KeypressDelete.ogg:system/media/audio/ui/KeypressDelete.ogg \
