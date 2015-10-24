@@ -23,13 +23,13 @@ RINGTONE_FILES := Callisto Dione Ganymede Luna Oberon Phobos RobotsforEveryone S
 
 #Copy sounds
 PRODUCT_COPY_FILES += $(foreach sound,$(ALARM_FILES),\
-    $(LOCAL_PATH)/material/alarms/ogg/$(sound).ogg:system/media/audio/alarms/$(sound).ogg)
+    $(LOCAL_PATH)/material/alarms/$(sound).ogg:system/media/audio/alarms/$(sound).ogg)
 
 PRODUCT_COPY_FILES += $(foreach sound,$(EFFECT_FILES),\
-    $(LOCAL_PATH)/material/effects/ogg/$(sound).ogg:system/media/audio/ui/$(sound).ogg)
+    $(LOCAL_PATH)/material/effects/$(sound).ogg:system/media/audio/ui/$(sound).ogg)
 
 PRODUCT_COPY_FILES += $(foreach sound,$(NOTIFICATION_FILES),\
-    $(LOCAL_PATH)/material/notifications/ogg/$(sound).ogg:system/media/audio/notifications/$(sound).ogg)
+    $(LOCAL_PATH)/material/notifications/$(sound).ogg:system/media/audio/notifications/$(sound).ogg)
 
 PRODUCT_COPY_FILES += $(foreach sound,$(RINGTONE_FILES),\
-    $(LOCAL_PATH)/material/ringtones/ogg/$(sound).ogg:system/media/audio/ringtones/$(sound).ogg)
+    $(LOCAL_PATH)/material/ringtones/$(sound).ogg:system/media/audio/ringtones/$(sound).ogg)
