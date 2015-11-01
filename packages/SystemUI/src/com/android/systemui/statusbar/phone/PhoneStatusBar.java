@@ -236,14 +236,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
             .build();
 
-<<<<<<< HEAD
-    public static final int FADE_KEYGUARD_START_DELAY = 50;
-    public static final int FADE_KEYGUARD_DURATION = 150;
-=======
     public static final int FADE_KEYGUARD_START_DELAY = 100;
     public static final int FADE_KEYGUARD_DURATION = 300;
     public static final int FADE_KEYGUARD_DURATION_PULSING = 96;
->>>>>>> aosp/marshmallow-dr-release
 
     /** Allow some time inbetween the long press for back and recents. */
     private static final int LOCK_TO_APP_GESTURE_TOLERENCE = 100;
