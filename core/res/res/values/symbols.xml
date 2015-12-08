@@ -2084,6 +2084,7 @@
   <java-symbol type="string" name="zen_mode_default_events_name" />
   <java-symbol type="array" name="config_system_condition_providers" />
   <java-symbol type="string" name="muted_by" />
+  <java-symbol type="string" name="zen_mode_alarm" />
 
   <java-symbol type="string" name="select_day" />
   <java-symbol type="string" name="select_year" />
@@ -2333,4 +2334,6 @@
 
   <!-- Doze invert -->
   <java-symbol type="bool" name="config_invert_colors_on_doze" />
+
+  <java-symbol type="string" name="config_packagedKeyboardName" />
 </resources>
