@@ -270,6 +270,8 @@ public interface MetricsConstants {
     public static final int MINIMAL_SETTINGS = 244;
     public static final int VOLUME_ROCKER_SETTINGS = 245;
 	public static final int ABOUT_MINIMAL = 246;
+	public static final int BATTERY_SETTINGS = 247;
+	public static final int STATUS_BAR_CLOCK_STYLE= 248;
 
 
     // These constants must match those in the analytic pipeline, do not edit.
