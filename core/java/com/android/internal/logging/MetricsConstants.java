@@ -262,6 +262,15 @@ public interface MetricsConstants {
     public static final int TUNER_DEMO_MODE_ON = 236;
     public static final int TUNER_BATTERY_PERCENTAGE = 237;
     public static final int FUELGAUGE_INACTIVE_APPS = 238;
+    public static final int NOTIFICATION_LIGHT_SETTINGS = 239;
+    public static final int BATTERY_LIGHT_SETTINGS = 240;
+    public static final int NAVIGATION_BAR_SETTINGS = 241;
+    public static final int POWER_MENU_ACTIONS = 242;
+    public static final int STATUS_BAR_SETTINGS = 243;
+    public static final int MINIMAL_SETTINGS = 244;
+    public static final int VOLUME_ROCKER_SETTINGS = 245;
+	public static final int ABOUT_MINIMAL = 246;
+
 
     // These constants must match those in the analytic pipeline, do not edit.
     // Add temporary values to the top of MetricsLogger instead.
